@@ -1,6 +1,4 @@
-// Because I am troublesome I overwrite for the time being.
-// Then use getEventListeners and push first
-window.onkeydown = (e) => {
+window.addEventListener('keydown', (e) => {
   const FOCUS_CLASS = 'is-fakeFocus';
   'use strict';
 
@@ -9,4 +7,4 @@ window.onkeydown = (e) => {
     e.stopImmediatePropagation();
     return false;
   }
-};
+}, {capture:true, passive:false});

@@ -1,4 +1,4 @@
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keypress', (e) => {
   const FOCUS_CLASS = 'is-fakeFocus';
   'use strict';
 
@@ -7,4 +7,4 @@ window.addEventListener('keydown', (e) => {
     e.stopImmediatePropagation();
     return false;
   }
-}, {capture:true, passive:false});
+}, {capture: true, passive: false});

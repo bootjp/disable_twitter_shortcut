@@ -1,12 +1,18 @@
-// Because I am troublesome I overwrite for the time being.
-// Then use getEventListeners and push first
-window.onkeydown = (e) => {
-  const FOCUS_CLASS = 'is-fakeFocus';
+(function (window) {
   'use strict';
+  window.addEventListener('keypress', (e) => {
+    // 個別tweet画面であり，文字入力中でないときにイベントをキャンセルする
+    if (window.location.href.includes('/status/') && NotFocusInput()) {
+      e.stopImmediatePropagation();
+      return false;
+    }
 
-  if (window.location.href.indexOf('/status/') !== -1 && // status画面であり
-    document.getElementsByClassName(FOCUS_CLASS).length === 0) { // フォーカスがあたっていないとき
-    e.stopImmediatePropagation();
-    return false;
-  }
-};
+    /**
+     * @return {boolean}
+     */
+    function NotFocusInput() {
+      const FOCUS_CLASS = 'is-fakeFocus';
+      return document.getElementsByClassName(FOCUS_CLASS).length === 0;
+    }
+  }, {capture: true, passive: false});
+})(window);

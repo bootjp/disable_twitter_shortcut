@@ -11,7 +11,7 @@
      * @return {boolean}
      */
     function NotFocusInput() {
-      const FOCUS_CLASS = 'is-fakeFocus';
+      const FOCUS_CLASS = 'public-DraftStyleDefault-block';
       return document.getElementsByClassName(FOCUS_CLASS).length === 0;
     }
   }, {capture: true, passive: false});

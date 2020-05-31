@@ -7,12 +7,13 @@
       return false;
     }
 
-    /**
-     * @return {boolean}
-     */
-    function NotFocusInput() {
-      const FOCUS_CLASS = 'public-DraftStyleDefault-block';
-      return document.getElementsByClassName(FOCUS_CLASS).length === 0;
-    }
   }, {capture: true, passive: false});
+  /**
+   * @return {boolean}
+   */
+  function NotFocusInput() {
+    const FOCUS_CLASS = 'public-DraftStyleDefault-block';
+    return document.getElementsByClassName(FOCUS_CLASS).length === 0;
+  }
+
 })(window);

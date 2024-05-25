@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Twitterのキーボードショートカットを無効化するやつ",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "disable twitter web keyboard shortcut for tweet page.",
   "icons": {
     "128": "icon.png",
